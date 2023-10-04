@@ -26,7 +26,7 @@ data1_stat = data1(30000:32000);
 L1 = length(data1_stat);
 fft_1 = fft(data1_stat);
 fft_1_shift = fftshift(fft_1);
-fft_1_shift_oneSide = fft_1_shift(1:L/2+1);
+fft_1_shift_oneSide = fft_1_shift(1:L1/2+1);
 f1 = (fs1/L1)*(L1/2:-1:0);
 figure();
 plot(f1, abs(fft_1_shift_oneSide));
